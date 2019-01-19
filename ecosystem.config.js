@@ -9,7 +9,7 @@ module.exports = {
     max_memory_restart: '1G',
     env: {
       NODE_ENV: 'production',
-      HOST: '0.0.0.0',
+      HOST: '127.0.0.1',
       API_URL: 'https://www.errietta.me'
     }
   }]
