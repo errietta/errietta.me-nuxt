@@ -60,6 +60,7 @@
   display: inline;
   border-right: 1px solid #786D87;
   padding-right: 5px;
+  padding-left: 5px;
 }
 
 .menu ul li:last-child {
