@@ -128,8 +128,6 @@ export default {
   },
   computed: {
     recentPosts() {
-      // eslint-disable-next-line
-      console.log(this.posts)
       return this.posts.filter(post => post.id < 3)
     }
   }
