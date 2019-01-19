@@ -4,6 +4,14 @@
       &copy; {{ year }} Errietta Kostala
     </p>
     <p>
+      <a target="_blank" href="https://github.com/errietta">
+        Github
+      </a>
+      -
+      <a target="_blank" href="https://github.com/errietta/errietta.me-nuxt">
+        Source code for this site
+      </a>
+      -
       <a target="_blank" href="http://www.twitter.com/errietta">
         Twitter
       </a>
