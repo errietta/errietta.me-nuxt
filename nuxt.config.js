@@ -3,6 +3,9 @@ const pkg = require('./package')
 module.exports = {
   mode: 'universal',
 
+  manifest: {
+    name: 'Errietta Kostala - personal site'
+  },
   /*
   ** Headers of the page
   */
@@ -10,6 +13,7 @@ module.exports = {
     title: 'Errietta Kostala - personal website',
     meta: [
       { charset: 'utf-8' },
+      { name: 'name', content: 'Errietta Kostala - personal site' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description },
       { hid: 'keywords', name: 'keywords', content: 'Errietta Kostala, web developer, web developer portfolio, web blog' },
