@@ -7,7 +7,7 @@ const postsApi = async (req, res) => {
 }
 
 const getFeed = async () => {
-  if (!cache.posts || cache.posts.time <= new Date().getTime() - 60 * 60 * 24 * 1000) {
+  if (!cache.posts || cache.posts.time <= new Date().getTime() - 60 * 60 * 1000) {
     // eslint-disable-next-line
     console.log('fetching new');
 
