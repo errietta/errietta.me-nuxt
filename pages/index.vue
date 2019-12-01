@@ -10,7 +10,7 @@
     <div class="jumbotron center">
       <h1>Hello.</h1>
       <p class="nomargin">
-        I'm Errietta Kostala and I'm a full stack developer...
+        I'm Errietta Kostala (or Erry) and I'm a full stack developer...
       </p>
       <p class="cursive nomargin">
         with a passion.
@@ -57,12 +57,6 @@
         </a> - a small company in Lancaster that holds open source and community projects very dearly.
       </p>
       <p>
-        I'm an ex-employee of FairFX (or as I call it FairF-eX) and I currently work as a software developer for
-        <a href="https://zoopla.co.uk" target="_blank">
-          Zoopla
-        </a>, and I still spend a lot of my time on community projects.
-      </p>
-      <p>
         Do you want to learn more about me? Check out my
         <a href="/cv" class="underline">
           projects
@@ -75,14 +69,14 @@
 
     <div>
       <h3>Latest blog posts</h3>
-      <app-posts :posts="recentPosts" />
+      <!-- <app-posts :posts="recentPosts" /> !-->
     </div>
 
     <div>
       <h3>Testimonials</h3>
 
       <blockquote>
-        <p>I have a sneaking suspicion this woman is going to be scary good in a few years.</p>
+        <p>I have a sneaking suspicion Errietta is going to be scary good in a few years.</p>
         <small>Matt Trout, Shadowcat Systems Technical Director.</small>
       </blockquote>
 
@@ -98,10 +92,10 @@
 
       <blockquote>
         <p>
-          Errietta has all the qualities of a great web developer — she
+          Errietta has all the qualities of a great web developer —
           learns quickly, values feedback from both engineers and designers, and cares
-          deeply about sharing her knowledge with others. I'm always impressed by how
-          quickly she's willing to jump into a new code base and effectively solve
+          deeply about sharing knowledge with others. I'm always impressed by how
+          quickly Errietta is willing to jump into a new code base and effectively solve
           problems.
         </p>
         <small>Kate Hudson, Webmaker Developer</small>
@@ -111,21 +105,12 @@
 </template>
 
 <script>
-import Posts from '../components/Posts.vue'
 
 export default {
   name: 'Index',
   components: {
-    'app-posts': Posts
   },
   props: {},
-  asyncData({ $axios }) {
-    return $axios.get('api/posts').then(res => ({ posts: res.data })).catch((e) => {
-      // eslint-disable-next-line
-      console.log(e)
-      return { posts: [] }
-    })
-  },
   computed: {
     recentPosts() {
       return this.posts.filter(post => post.id < 3)
@@ -171,6 +156,7 @@ hr.styled:after {
   margin: 10px 0 0;
   border-top: 2px dotted #ff05ab;
   border-bottom: 2px inset #ff05ab;
+  font-size: 80%;
 }
 
 .jumbotron .h1,

@@ -57,6 +57,13 @@ a {
   margin-right: auto;
 }
 
+@media only screen and (max-device-width: 900px) {
+  .wrap {
+    padding: 0;
+  }
+}
+
+
 body {
   margin: 0;
 }
