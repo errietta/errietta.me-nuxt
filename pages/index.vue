@@ -69,7 +69,7 @@
 
     <div>
       <h3>Latest blog posts</h3>
-      <!-- <app-posts :posts="recentPosts" /> !-->
+      <app-posts :posts="recentPosts" />
     </div>
 
     <div>
@@ -106,11 +106,21 @@
 
 <script>
 
+import Posts from '../components/Posts.vue'
+
 export default {
   name: 'Index',
   components: {
+    'app-posts': Posts
   },
   props: {},
+  asyncData({ $axios }) {
+    return $axios.get('api/posts').then(res => ({ posts: res.data })).catch((e) => {
+      // eslint-disable-next-line
+      console.log(e)
+      return { posts: [] }
+    })
+  },
   computed: {
     recentPosts() {
       return this.posts.filter(post => post.id < 3)
